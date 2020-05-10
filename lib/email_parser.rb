@@ -14,12 +14,10 @@ class EmailAddressParser
 #    emails.delete(",").split.uniq
 #  end
   
-    def parse 
-    emails.split.collect do |address|
-      address.split(',') 
-    end
-    .flatten.uniq 
-    end 
+  def parse 
+    emails.split.collect { |address| address.split(',') }
+    .flatten.uniq    
+  end 
 
   
 end
