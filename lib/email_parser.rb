@@ -10,10 +10,16 @@ class EmailAddressParser
      @emails = emails
    end
   
-  def self.parse
-    emails.delete(",").split.uniq
-  end
+  #def self.parse
+  #  emails.delete(",").split.uniq
+  #end
   
+  
+  def parse
+  puts splitEmail = emails.split.collect {|address| address.split(',')} 
+  returnArr = splitEmail.flatten.uniq
+  returnArr
+  end
   
 end
 
