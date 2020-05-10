@@ -5,11 +5,13 @@
 
 class EmailAddressParser
   attr_accessor :emails
-  @@list = []
-   def initiali
+  
+   def initialize
+     @emails = emails
+   end
   
   def self.parse
-    
+    emails.delete(",").split.uniq
   end
   
   
