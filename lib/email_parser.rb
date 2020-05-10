@@ -10,7 +10,7 @@ class EmailAddressParser
      @emails = emails
    end
   
-  def self.parse(input)
+#  def self.parse(input)
     emails.delete(",").split.flatten.uniq
   end
   
